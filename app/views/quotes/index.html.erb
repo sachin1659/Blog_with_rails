@@ -1,0 +1,12 @@
+<h1 id="page_title">The best of Greats</h1>
+
+	<div id="posts_wrapper" class="skinny_wrapper">
+		<% @quotes.each do |quote|%>
+		<div class="post">
+			<p class="date"><%= quote.created_at.strftime('%A, %B %d') %></p>
+			<h2><a href="#"><%= link_to quote.title, quote%></a></h2>
+			<hr>
+		</div>
+		<%end%>
+	</div>
+	
