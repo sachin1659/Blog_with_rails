@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Worth Desire - Part Designer, Part Developer</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+ <header id="main_navigation" class="clearfix">
+    <%= link_to "Worth Desire", root_path,class:"name"%>
+    <nav>
+      <%= link_to "Articles", posts_path%>
+      <%= link_to "Quotes", quotes_path%> 
+      <a href="#">Contacts</a>
+    </nav>
+  </header>
+  
+    <%= yield %>
+
+    <footer id="main_footer">
+    <p class="copyright">&copy; 2018 Worth Desire
+    </p>
+    <nav>
+      <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      <a href="https://facebook.com/sachin0O7" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://plus.google.com/u/0/113375778934562563644"target="_blank" ><i class="fab fa-google-plus-square" target="_blank"></i></a>
+    </nav>
+  </footer>
+  </body>
+</html>
