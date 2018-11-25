@@ -1,5 +1,5 @@
 class QuotesController < ApplicationController
-	before_action :find_project, only: [:show,:edit,:update,:destroy]
+	before_action :find_quote, only: [:show,:edit,:update,:destroy]
 	def index
 		@quotes = Quote.all.order("created_at desc")
 	end
@@ -22,11 +22,11 @@ class QuotesController < ApplicationController
 
 	private
 
-	def find_project
-		@quote = Quote.find(params[:id])
+	def find_quote
+		@quote = Quote.friendly.find(params[:id])
 	end
 
 	def project_params
-		params.require(:quote).permit(:title, :description, :link)
+		params.require(:quote).permit(:title, :description, :link, :slug)
 	end
 end
