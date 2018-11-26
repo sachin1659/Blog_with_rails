@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_11_25_045333) do
+=======
+ActiveRecord::Schema.define(version: 2018_11_24_190754) do
+>>>>>>> 0517b6e11c7dd17b30fe61bc424960ab49e16511
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
@@ -47,8 +51,11 @@ ActiveRecord::Schema.define(version: 2018_11_25_045333) do
     t.string "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.string "slug"
     t.index ["slug"], name: "index_quotes_on_slug", unique: true
+=======
+>>>>>>> 0517b6e11c7dd17b30fe61bc424960ab49e16511
   end
 
 end
