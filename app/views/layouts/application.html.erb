@@ -18,6 +18,9 @@
       <%= link_to "Posts", posts_path%>
       <%= link_to "Achievers Way", quotes_path%>
       <%= link_to "Contact Me", new_contact_path%> 
+      <% if user_signed_in? %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      <% end %>
     </nav>
   </header>
 

@@ -11,8 +11,10 @@
 			<a href="<%= @quote.link %>" class="project_button" target="_blank">Visit <%= @quote.title %></a>
 		</div>
 	</div>
-		
-	<%= link_to "Edit", edit_quote_path(@quote) %>
-	<%= link_to "Delete", quote_path(@quote), method: :delete, data: { confirm: "Are you sure ? "}%>
-	<hr>
-</div>
+<% if user_signed_in? %>
+	<div id = "admin_links">
+		<%= link_to "Edit Quote", edit_quote_path(@quote) %>
+		<%= link_to "Delete Quote", quote_path(@quote), method: :delete, data: { confirm: "Are you sure ? "}%>
+	</div>
+<% end %>
+<hr>
