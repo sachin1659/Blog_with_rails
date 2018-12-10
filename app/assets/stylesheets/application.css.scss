@@ -182,6 +182,20 @@ input[type="submit"], .button {
 	text-align: center;
 }
 
+wrapperline{
+width: 450px;
+float: left;
+height: 60px;
+background-color:#CCCCCC;}
+
+.boxinside{
+width: 200px;
+float: left;
+height: 50px;
+margin: 5px;
+float:left;}
+
+
 @import 'welcome';
 @import 'post_projects';
 @import 'pygments';
