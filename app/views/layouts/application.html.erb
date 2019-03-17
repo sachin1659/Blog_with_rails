@@ -17,7 +17,7 @@
     <%= link_to "Worth Desire", root_path,class:"name"%>
     <nav>
       <%= link_to "Posts", posts_path%>
-      <%= link_to "Achievers Way", quotes_path%>
+      <%#= link_to "Rails & React ", quotes_path%>
       <%= link_to "Contact Me", new_contact_path%> 
       <% if user_signed_in? %>
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
@@ -32,7 +32,7 @@
   <% end %>
     <%= yield %>
  
- 
+
     <footer id="main_footer">
     <p class="copyright">&copy; 2018 Worth Desire
     </p>

@@ -18,12 +18,12 @@
 				<p class ="date"><%= post.created_at.strftime("%A, %b %d")%></p>
 			<%end%>
 		</div>		
-		<div class="col-3 homepage_content">
+		<!-- <div class="col-3 homepage_content">
 			<h2>Interesting Stuffs</h2>
 			<hr>
-			<% @quotes.each do |quote|%>
-				<h3><a href="#"><%= link_to quote.title,quote%></a></h3>
-				<p class ="date"><%= quote.created_at.strftime("%A, %b %d")%></p>
-			<%end%>
-		</div>
+			<%# @quotes.each do |quote|%>
+				<h3><a href="#"><%#= link_to quote.title,quote%></a></h3>
+				<p class ="date"><%#= quote.created_at.strftime("%A, %b %d")%></p>
+			<%#end%>
+		</div> -->
 	</div>
