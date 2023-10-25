@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Worth Desire - Part Designer, Part Developer</title>
+      <title>Worth Desire</title>
+  <%= favicon_link_tag 'favicon.jpg' %>
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <%= csrf_meta_tags %>
@@ -15,13 +16,22 @@
  <header id="main_navigation" class="clearfix">
     <%= link_to "Worth Desire", root_path,class:"name"%>
     <nav>
-      <%= link_to "Articles", posts_path%>
-      <%= link_to "Quotes", quotes_path%> 
-      <a href="#">Contacts</a>
+      <%= link_to "Posts", posts_path%>
+      <%#= link_to "Rails & React ", quotes_path%>
+      <%= link_to "Contact Me", new_contact_path%> 
+      <% if user_signed_in? %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      <% end %>
     </nav>
   </header>
-  
+
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% elsif alert %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
     <%= yield %>
+ 
 
     <footer id="main_footer">
     <p class="copyright">&copy; 2018 Worth Desire

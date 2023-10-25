@@ -2,9 +2,13 @@
 		<div class="col-1 about homepage_content">
 			<h2>About</h2>
 			<hr>
-			<p>I'm a developer &amp;  living in Colordo Springs, Colorado.</p>
-			<p>By day I work as rails back-end dev/ developer at Daffodil Software, by night I teach how to design &amp; code rails application to <a href ="#">myself</a>.</p>
-			<p>You can find me speaking in 140 characters on Twitter, swooshing some pixels on Dribble and sharing some code on Github.</p>
+				 <div class="wrapperline">
+					<div class="boxinside">
+						<p>I'm a developer &amp;  living in Delhi, India.</p>
+						<p>By day I work as rails back-end dev/ developer at Daffodil Software &amp; by night I try to find something interesting on which I can work on.</p>
+					</div>
+					<div class="boxinside"><%= image_tag("about_img.jpg", height: '170', width: '150')%></div>
+				</div>
 		</div>
 		<div class="col-2  homepage_content">
 			<h2>Stuff I've Written</h2>
@@ -14,12 +18,12 @@
 				<p class ="date"><%= post.created_at.strftime("%A, %b %d")%></p>
 			<%end%>
 		</div>		
-		<div class="col-3 homepage_content">
+		<!-- <div class="col-3 homepage_content">
 			<h2>Interesting Stuffs</h2>
 			<hr>
-			<% @quotes.each do |quote|%>
-				<h3><a href="#"><%= link_to quote.title,quote%></a></h3>
-				<p class ="date"><%= quote.created_at.strftime("%A, %b %d")%></p>
-			<%end%>
-		</div>
+			<%# @quotes.each do |quote|%>
+				<h3><a href="#"><%#= link_to quote.title,quote%></a></h3>
+				<p class ="date"><%#= quote.created_at.strftime("%A, %b %d")%></p>
+			<%#end%>
+		</div> -->
 	</div>
